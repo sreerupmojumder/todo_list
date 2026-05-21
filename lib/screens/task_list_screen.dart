@@ -33,7 +33,7 @@ class TaskListScreen extends StatelessWidget {
         time: '07:00 PM',
         status: 'To-do',
         statusColor: Color(0xFF2196F3),
-        icon: Icons.account_balance_wallet,
+        icon: Icons.person,
         iconBg: Colors.deepPurple,
       ),
       TaskModel(
