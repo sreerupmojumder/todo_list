@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_list_app/screens/add_task_screen.dart';
 import 'package:todo_list_app/task_model.dart';
 
 class TaskListScreen extends StatelessWidget {
@@ -57,6 +58,15 @@ class TaskListScreen extends StatelessWidget {
             backgroundColor: Colors.transparent,
             elevation: 0,
           ),
+      
+      floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => AddTaskScreen(),));
+          },
+        backgroundColor: Colors.deepPurple,
+        child: Icon(Icons.add, color: Colors.white,),
+
+      ),
 
       body: ListView.builder(
           itemCount: tasks.length,
@@ -116,12 +126,12 @@ class TaskListScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: .spaceBetween,
                           children: [
-                            Icon(Icons.access_time_filled, size: 16, color: Colors.deepPurple),
+                            Icon(Icons.access_time_filled, size: 16, color: Colors.deepPurple.withOpacity(0.6)),
                             SizedBox(width: 3,),
                             Text(task.time,style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.deepPurple
+                                color: Colors.deepPurple.withOpacity(0.6)
                             ),)
                           ],
                         ),
