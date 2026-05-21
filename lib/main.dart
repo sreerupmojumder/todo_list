@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFF8F9FA),
       ),
-      home: const TaskListScreen(),
+      home: TaskListScreen(),
     );
   }
 }
